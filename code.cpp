@@ -16,8 +16,8 @@ void skip(float pr, float total){
         cout<<"You are on the verge, just go all the classes!";
     }
     else{
-        cout<<"Class can be skipped: "<<counter;
-        cout<<"Attendance percentage will be: "<<ceil(percent(pr, total))<<"%"<<endl;
+        cout<<"Class can be skipped: "<<counter<<endl;
+        cout<<"Attendance percentage will be: "<<ceil(percent(pr, total-1))<<"%"<<endl;
     }
 }
 
