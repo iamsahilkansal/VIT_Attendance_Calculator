@@ -17,6 +17,7 @@ void skip(float pr, float total){
     }
     else{
         cout<<"Class can be skipped: "<<counter;
+        cout<<"Attendance percentage will be: "<<ceil(percent(pr, total))<<"%"<<endl;
     }
 }
 
@@ -27,6 +28,7 @@ void attend(float pr, float total){
         total++;
     }
     cout<<"Class needed to be attended: "<<temp-pr<<endl;
+    cout<<"Attendance percentage will be: "<<ceil(percent(temp, total))<<"%"<<endl;
 }
 bool can_skip(float pr,float total){
     float per=(pr*100)/total;
@@ -47,7 +49,7 @@ int main(){
     cin>>total;
     cout<<"Enter the total no of present days: ";
     cin>>pr;
-    cout<<"Current Attendance percentage is: "<<ceil(percent(pr, total))<<endl;
+    cout<<"Current Attendance percentage is: "<<ceil(percent(pr, total))<<"%"<<endl;
     if(can_skip(pr, total)){
         skip(pr, total);
     }
